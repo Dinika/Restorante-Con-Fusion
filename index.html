@@ -209,6 +209,14 @@
                 <a class="carousel-control-next" href="#gallery" role="button" data-slide="next">
                   <span class="carousel-control-next-icon"></span>
                 </a>
+                <div class="btn-group" id="carousel-buttons">
+                  <button class="btn btn-danger btn-small" id="carousel-pause">
+                    <span class="fa fa-pause"></span>
+                  </button>
+                  <button class="btn btn-danger btn-small" id="carousel-play">
+                    <span class="fa fa-play"></span>
+                  </button>
+                </div>
               </div>
             </div>
         </div>
@@ -318,10 +326,18 @@
     <script src="node_modules/tether/dist/js/tether.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
     <script>
-      /*$(document).ready(function()
+      $(document).ready(function()
       {
-        $('[data-toggle="tooltip"]').tooltip();
-      });*/
+        $('#gallery').carousel({interval: 1000});
+        $('#carousel-pause').click(function()
+        {
+            $('#gallery').carousel('pause');
+        });
+        $('#carousel-play').click(function()
+        {
+            $('#gallery').carousel('cycle');
+        });
+      });
     </script>
 </body>
 
