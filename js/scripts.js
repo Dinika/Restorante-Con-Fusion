@@ -1,5 +1,6 @@
 $(document).ready(function()
 {
+  //Add functionality to the carousel button
   $('#gallery').carousel({interval: 1000});
   $('#carousel-button').click(function()
   {
@@ -16,4 +17,17 @@ $(document).ready(function()
         $("#carousel-button").children('span').addClass("fa-pause")
       }
   });
+
+  //Activating the reserve-modal
+  $('#reserve-button').on('click', function()
+  {
+    $('#reserve-modal').modal('show');
+  });
+
+  //Activating the login-modal
+  $('#login-button').on('click', function()
+  {
+    $('#login-modal').modal('show');
+  });
+
 });
